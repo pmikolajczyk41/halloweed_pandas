@@ -17,11 +17,11 @@ public class CommentActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        EditText value = (EditText) findViewById(R.id.commentBox);
-        String comment  = value.getText().toString();
 
         Button send = findViewById(R.id.sendBtn);
         send.setOnClickListener(v -> {
+            EditText value = (EditText) findViewById(R.id.commentBox);
+            String comment  = value.getText().toString();
             Intent intent = new Intent();
             intent.putExtra("comment",comment);
             setResult(Activity.RESULT_OK,intent);

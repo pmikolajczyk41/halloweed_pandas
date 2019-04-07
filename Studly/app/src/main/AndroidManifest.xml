@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.studly">
 
     <application
@@ -8,7 +9,14 @@
         android:label="Studly"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".UserProfile"
+            tools:ignore="ExtraText">
+            android:theme="@style/AppTheme.NoActionBar"
+
+        </activity>
         <activity
             android:name=".MainScreen"
             android:label="Studly"
@@ -34,9 +42,9 @@
         <activity
             android:name=".WallActivity"
             android:label="@string/title_activity_wall"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".LoginActivity">android:theme="@style/AppTheme.NoActionBar"
         </activity>
-        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>

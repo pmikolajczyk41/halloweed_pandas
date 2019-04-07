@@ -7,6 +7,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".WallActivity">
 
+
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -25,7 +27,11 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:theme="@style/AppTheme"
-                android:visibility="visible">>
+                android:visibility="visible"><![CDATA[>
+
+
+
+                ]]>
 
                 <ImageView
                     android:id="@+id/media_image"
@@ -36,10 +42,24 @@
                     android:scaleType="centerCrop"
                     android:visibility="visible"
                     app:srcCompat="@drawable/ic_studly_logo_svg_alfa" />
+
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/userprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_png" />
 
     <SearchView
         android:id="@+id/searchView"

@@ -22,25 +22,28 @@ public class AddPostActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_add_post);
+        setContentView(R.layout.activity_add_post);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        EditText titleBlock = (EditText)findViewById(R.id.titleAdded);
-        String title = titleBlock.getText().toString();
 
-        EditText contentBlock = (EditText)findViewById(R.id.contentAdded);
-        String content = contentBlock.getText().toString(); //cos jest nie tak z tymi wartosciami
-
-        EditText tagsBlock = (EditText) findViewById(R.id.tags);
-        String tagging = tagsBlock.getText().toString();
-        String[] tagger = tagging.split(",");
-        ArrayList<String> tags = new ArrayList<>(tagger.length);
-        Collections.addAll( tags, tagger );
 
         Button addButton = findViewById(R.id.addBtn2);
         addButton.setOnClickListener(v -> {
+
+            EditText titleBlock = (EditText)findViewById(R.id.titleAdded);
+            String title = titleBlock.getText().toString();
+
+            EditText contentBlock = (EditText)findViewById(R.id.contentAdded);
+            String content = contentBlock.getText().toString(); //cos jest nie tak z tymi wartosciami
+
+            EditText tagsBlock = (EditText) findViewById(R.id.tags);
+            String tagging = tagsBlock.getText().toString();
+            String[] tagger = tagging.split(",");
+            ArrayList<String> tags = new ArrayList<>(tagger.length);
+            Collections.addAll( tags, tagger );
+
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy");
             LocalDate localDate = LocalDate.now();
             Intent it = new Intent(this, WallActivity.class);
@@ -48,6 +51,7 @@ public class AddPostActivity extends AppCompatActivity {
             it.putExtra("content", content);
             it.putExtra("date", dtf.format(localDate));
             it.putExtra("tags", tags);
+            finish();
             startActivity(it);
         });
     }

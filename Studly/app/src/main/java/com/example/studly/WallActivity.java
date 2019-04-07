@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,12 @@ public class WallActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_wall);
+
+        FloatingActionButton ib = findViewById(R.id.userprofile);
+        ib.setOnClickListener(v -> {
+            Intent intent = new Intent(this, UserProfile.class);
+            startActivity(intent);
+        });
 
         linearLayout = findViewById(R.id.posts);
         //pobranie wartosci z addPostActivity
@@ -111,6 +118,7 @@ public class WallActivity extends AppCompatActivity {
         Button addPost = findViewById(R.id.addBtn);
         addPost.setOnClickListener(v -> {
             Intent intent = new Intent(this, AddPostActivity.class);
+            finish();
             startActivity(intent);
         });
     }

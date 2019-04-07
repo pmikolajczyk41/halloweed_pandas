@@ -8,7 +8,9 @@ import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.time.LocalDate;
@@ -89,4 +91,18 @@ public class PostView extends AppCompatActivity {
         });
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 1 && resultCode == RESULT_OK ){
+            ConstraintLayout comment = ((ConstraintLayout) LayoutInflater.from(this).inflate(R.layout.comment_full_view, null));
+            ((TextView)comment.getChildAt(0)).setText("ja");
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+            LocalDate localDate = LocalDate.now();
+            ((TextView)comment.getChildAt(1)).setText(dtf.format(localDate));
+            ((TextView)comment.getChildAt(2)).setText(data.getExtras().getString("comment"));
+
+            ((LinearLayout)findViewById(R.id.comments_container)).addView(comment);
+        }
+    }
 }
