@@ -1,4 +1,4 @@
-![logo studly](imgs/studly_logo_png.png)
+![logo studly](imgs/logo_png_400.png)
 
 
 
