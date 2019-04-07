@@ -1,16 +1,16 @@
-![logo studly](imgs/studly_logo_png.png)
+![logo studly](imgs/studly_logo_png.png | width="500px")
 
 
 
 ## Idea
 
 
-Studly jest aplikacj¹ mobiln¹ dla Android przeznaczon¹ dla studentów z ca³ego miasta, z ró¿nych uczelni, niezale¿nie od œredniej ocen.
+Studly jest aplikacjÄ… mobilnÄ… dla Android przeznaczonÄ… dla studentÃ³w z caÅ‚ego miasta, z rÃ³Å¼nych uczelni, niezaleÅ¼nie od Å›redniej ocen.
 
 
 
-Dziêki studly nie musisz ju¿ prosiæ o do³¹czenie do miliona zamkniêtych grup na fb, ani zawracaæ g³owy zapracowanym starszym kolegom. Masz problem z zadaniem? Ca³eczka wygra³a ze zmêczeniem, a jutro kolokwium? Na studly znajdziesz odpowiedŸ. Pomocni studenci z ró¿nych uczelni czekaj¹ ¿eby odpowiedzieæ na twoje pytanie z ka¿dej dziedziny technicznej.
-Znajdziesz tu te¿ poprzednie kolokwia, egzaminy, repetytoria i wszelkie pomoce studenckie. Od studentów dla studentów.
+DziÄ™ki studly nie musisz juÅ¼ prosiÄ‡ o doÅ‚Ä…czenie do miliona zamkniÄ™tych grup na fb, ani zawracaÄ‡ gÅ‚owy zapracowanym starszym kolegom. Masz problem z zadaniem? CaÅ‚eczka wygraÅ‚a ze zmÄ™czeniem, a jutro kolokwium? Na studly znajdziesz odpowiedÅº. Pomocni studenci z rÃ³Å¼nych uczelni czekajÄ… Å¼eby odpowiedzieÄ‡ na twoje pytanie z kaÅ¼dej dziedziny technicznej.
+Znajdziesz tu teÅ¼ poprzednie kolokwia, egzaminy, repetytoria i wszelkie pomoce studenckie. Od studentÃ³w dla studentÃ³w.
 
 
 
@@ -18,39 +18,39 @@ Znajdziesz tu te¿ poprzednie kolokwia, egzaminy, repetytoria i wszelkie pomoce s
 
 
 
-Ka¿dy wrzucony materia³ lub pytanie jest tagowane odpowiednimi znacznikami, przez co ³atwo mo¿na wyszukaæ to czego siê szuka i obserwowaæ interesuj¹ce nas tagi.
+KaÅ¼dy wrzucony materiaÅ‚ lub pytanie jest tagowane odpowiednimi znacznikami, przez co Å‚atwo moÅ¼na wyszukaÄ‡ to czego siÄ™ szuka i obserwowaÄ‡ interesujÄ…ce nas tagi.
 
 
 
-Tagi s¹ dodatkowo sortowane i sk³adowane w postaci drzewa.
+Tagi sÄ… dodatkowo sortowane i skÅ‚adowane w postaci drzewa.
 
 ## System punktowy
 
-Aplikacja zachêca³aby studentów do jej u¿ywania poprzez wprowadzenie systemu punktowego. Za ka¿de rozwi¹zane zadanie, odpowiedŸ na pytanie, b¹dŸ wrzucony materia³
- student otrzymuje okreœlon¹ liczbê punktów, które pozycjonuj¹ go w rankingu studentów. 
+Aplikacja zachÄ™caÅ‚aby studentÃ³w do jej uÅ¼ywania poprzez wprowadzenie systemu punktowego. Za kaÅ¼de rozwiÄ…zane zadanie, odpowiedÅº na pytanie, bÄ…dÅº wrzucony materiaÅ‚
+ student otrzymuje okreÅ›lonÄ… liczbÄ™ punktÃ³w, ktÃ³re pozycjonujÄ… go w rankingu studentÃ³w. 
 
 
 
-Punkty nastêpnie s³u¿¹ firmom i organizacj¹ studenckim do weryfikacji potencjalnych cz³onków/pracowników. Innymi s³owy, punkty mog³yby du¿o pomóc
+Punkty nastÄ™pnie sÅ‚uÅ¼Ä… firmom i organizacjÄ… studenckim do weryfikacji potencjalnych czÅ‚onkÃ³w/pracownikÃ³w. Innymi sÅ‚owy, punkty mogÅ‚yby duÅ¼o pomÃ³c
 przy wszelakich rekrutacjach. 
 
 
 
-Nigdy nie mia³eœ wolontariatu w CV? Teraz mo¿esz mieæ, nawet nie ruszaj¹c siê z fotela i poœwiêcaj¹c raptem 2min dziennie na odpowiedŸ na pytanie.
+Nigdy nie miaÅ‚eÅ› wolontariatu w CV? Teraz moÅ¼esz mieÄ‡, nawet nie ruszajÄ…c siÄ™ z fotela i poÅ›wiÄ™cajÄ…c raptem 2min dziennie na odpowiedÅº na pytanie.
 
 
 
-## Mo¿liwoœci rozwoju
+## MoÅ¼liwoÅ›ci rozwoju
 
 
 
-W przysz³oœci aplikacja mo¿e byæ rozszerzona o
+W przyszÅ‚oÅ›ci aplikacja moÅ¼e byÄ‡ rozszerzona o
 
-* wymianê punktów na sponsorowane np. kupony, zni¿ki na kawê
+* wymianÄ™ punktÃ³w na sponsorowane np. kupony, zniÅ¼ki na kawÄ™
 
-* automatyczne skanowanie zdjêæ i transponowanie na tekst
+* automatyczne skanowanie zdjÄ™Ä‡ i transponowanie na tekst
 
-* automatyczne wyszukiwanie istniej¹cych odpowiedzi na pytanie na innych forach (np. stack overflow, przeszukiwanie tutoriali na youtubie)
+* automatyczne wyszukiwanie istniejÄ…cych odpowiedzi na pytanie na innych forach (np. stack overflow, przeszukiwanie tutoriali na youtubie)
 
 * 
 
@@ -59,4 +59,4 @@ W przysz³oœci aplikacja mo¿e byæ rozszerzona o
 ## Screeny aplikacji
 
 
-#### Aplikacja stworzona podczas hackatonu Hacknõck III 2019.
+#### Aplikacja stworzona podczas hackatonu HacknÅ‘ck III 2019.
