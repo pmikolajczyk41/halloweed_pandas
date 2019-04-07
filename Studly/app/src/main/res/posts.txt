@@ -1,0 +1,30 @@
+{"posts" :[
+{"title":"Cześć, szukam osoby która pomogłaby mi z tymi zadaniami ze statystyki.",
+"content":"Wiemy, że 95% produkcji jest dobrej jakości, a reszta złej. Kontrola przepuszcza produkt dobrej jakości z prawdopodobieństwem 0.98, a złej jakości z prawdopodobieństwem 0.05.\\nObliczyć prawdopodobieństwo, że przedmiot:\\n(a) przepuszczony przez kontrole jest dobry\\n(b) odrzucony przez kontrole jest zły",
+"login":"Kuba",
+"date":"14.03.2019",
+"tags":["matematyka", "statystyka"]},
+
+{"title":"Hej czy ktoś zna odpowiedzi na te pytania z sieci",
+"content":"Wyjaśnij pojęcia:\\na) Access Point\\nb) WLAN\\nc) LTE\\nd) peer-to-peer\\ne) przełącznik sieciowy (switch)\\nf) Bluetooth\\ng) DNS\\nh) DHCP",
+"login":"Franco",
+"date":"04.04.2019",
+"tags": ["sieci"]},
+
+{"title":"Teoria obliczeń i złożoności obliczeniowej:",
+"content":"Wejście: Zbiór zadań T, dla każdego zadania t trzy liczby całkowite: długość zadania l(t)> 0, moment pojawienia się r(t) >= 0,oraz ograniczenie czasowe d(t)>0\\nWyjście: TAK, jeśli wszystkie zadania można wykonać na jednym procesorze, bez przerywania, spełniając ograniczenia czasowe, NIE w przeciwnym przypadku. \\nFormalnie, pytamy o funkcję alokacji A przydzielająca każdemu zadaniu t czas rozpoczęcia wykonywania A(t) taki,że [A(t), A(t)+l(t)] zawiera się w [r(t),d(t)] oraz [A(t), A(t)+l(t)) przecięcie [A(t'), A(t')+l(t')) = zbiór pusty,dla każdego zadania t' != t.",
+"login":"ania_46",
+"date":"25.03.2019",
+"tags": ["sieci"]},
+
+{"title":"Kompilatory",
+"content":"Czasami modyfikuje się zapis klasycznej gramatyki bezkontekstowej używając w prawych stronach produkcji gramatyki operatorów podobnych do operatorów dla języków regularnych. Nawiasów kwadratowych można używać do zapisania opcjonalnej części
+produkcji. Przykładowo, moglibyśmy napisać: instr → if wyr then instr [ else instr ]
+aby opisać opcjonalną część else. Uogólniając, A → α[β]γ jest równoważne dwóm produkcjom: A → αβγ oraz A → αγ. Nawiasy klamrowe mogą być użyte do opisania frazy, która powtarza się zero lub więcej razy. Na przykład:
+ instr → begin instr { ; instr } end  opisuje listę oddzielonych średnikami instrukcji zawartych pomiędzy begin i end. Uogólniając, A → α{β}γ jest równoważne A → αBγ oraz B → βB| ε. W pewnym sensie [β] oznacza wyrażenie regularne β|ε, zaś {β} oznacza β*. Notację tę możemy uogólnić tak, aby po prawej stronie produkcji umieszczać dowolne wyrażenie regularne zbudowane z symboli gramatyki.\\n(a) Podaj zbiór produkcji klasycznej gramatyki bezkontekstowej generujący taki sam zbiór
+napisów, co A → (b | C) A* c,\\n(b) Podaj zbiór produkcji klasycznej gramatyki bezkontekstowej generujący taki sam zbiórnapisów, co A → b A* ( B | c),\\n(c) Pokaż jak zastąpić dowolną produkcje A → r, gdzie r jest wyrażeniem regularnymskończonym zbiorem produkcji bezkontekstowych.",
+"login":"ania_46",
+"date":"25.03.2019",
+"tags": ["sieci"]}
+
+]}

@@ -5,30 +5,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.constraint.ConstraintLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class WallActivity extends AppCompatActivity {
@@ -40,24 +24,76 @@ public class WallActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_wall);
-        List<String> tags = new ArrayList<String>();
-        tags.add("statystyka");
-        tags.add("label");
+
         linearLayout = findViewById(R.id.posts);
-        linearLayout.addView(TakeArguments("Statystyka", "Nie umiem, pomocy!", "Emilka", "10.03.2019", tags));
-        linearLayout.addView(TakeArguments("Całki", "Nie umiem tego też, pomocy!", "Stanisław", "13.03.2019", new ArrayList<>()));
+        //pobranie wartosci z addPostActivity
+        String ty,conx,date;
+        ArrayList<String> tags;
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                ty= null;
+                conx= null;
+                date = null;
+                tags=null;
+            } else {
+                ty= extras.getString("tytul");
+                conx = extras.getString("content");
+                date = extras.getString("date");
+                tags = extras.getStringArrayList("tags");
+            }
+        } else {
+            ty = (String) savedInstanceState.getSerializable("tytul");
+            conx = (String) savedInstanceState.getSerializable("content");
+            date = (String) savedInstanceState.getSerializable("date");
+            tags = savedInstanceState.getStringArrayList("tags");
+        }
+
+        if (ty != null && conx != null && date != null){
+            System.out.println(ty);
+            System.out.println(conx);
+            linearLayout.addView(TakeArguments(ty, conx, "ja", date, tags));
+        }
+
+        List<String> tags1 = new ArrayList<>();
+        tags1.add("statystyka");
+        tags1.add("label");
+        tags1.add("AGH");
+        List<String> tag2 = new ArrayList<>();
+        tag2.add("analiza");
+        tag2.add("matematyka");
+        tag2.add("UJ");
+
+        linearLayout.addView(TakeArguments("Statystyka", "Nie umiem, pomocy!", "Emilka", "10.03.2019", tags1));
+        linearLayout.addView(TakeArguments("Całki", "Nie umiem tego też, pomocy!", "Stanisław", "13.03.2019", tag2));
         linearLayout.addView(TakeArguments("Programowanie", "Send help", "Kuba", "15.03.2019", new ArrayList<>()));
         linearLayout.addView(TakeArguments("Macierze", "Nie umiem w macierz", "Piotr", "19.03.2019", new ArrayList<>()));
 
-
-     /*   String text;
+        //json parsing
+        /*
+       String text="";
         try {
-            text = new String(Files.readAllBytes(Paths.get("C:\\Users\\Laura\\Documents\\App\\halloweed_pandas-android_app\\Studly\\posty.txt")));
-            JSONObject obj = new JSONObject(text);
-            System.out.println(text);
-            JSONArray arr = obj.getJSONArray("posts");
-       //     System.out.println(arr.getJSONObject(i).getString("login"));
+            InputStream inputStream = new InputStreamReader(getAssets().open("posts.txt"));
+            if (inputStream!=null){
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String tempString = "";
+                StringBuilder stringBuilder = new StringBuilder();
+                while ((tempString = bufferedReader.readLine())!=null){
+                    stringBuilder.append(tempString);
+                }
+                inputStream.close();
+                text = stringBuilder.toString();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+        try {
+            // get JSONObject from JSON file
+            JSONObject obj = new JSONObject(text);
+            JSONArray arr = obj.getJSONArray("posts");
+            Log.d("arr", arr.toString());
             for (int i = 0; i < arr.length(); i++){
                 linearLayout.addView(TakeArguments(
                         arr.getJSONObject(i).getString("title"),
@@ -67,13 +103,12 @@ public class WallActivity extends AppCompatActivity {
                         Collections.singletonList(arr.getJSONObject(i).getString("tags"))
                 ));
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
-        }*/
-
-        FloatingActionButton addPost = findViewById(R.id.add_post);
+        }
+*/
+        //adding a post
+        Button addPost = findViewById(R.id.addBtn);
         addPost.setOnClickListener(v -> {
             Intent intent = new Intent(this, AddPostActivity.class);
             startActivity(intent);
@@ -103,7 +138,5 @@ public class WallActivity extends AppCompatActivity {
         });
         return post;
     }
-
-
 
 }

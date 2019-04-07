@@ -58,6 +58,7 @@ W przyszłości aplikacja może być rozszerzona o
 ## Screeny aplikacji
 
 Home Screen:
+
 ![home screen](/imgs/screens/home_screen.jpg)
 
 #### Aplikacja stworzona podczas hackatonu Hacknőck III 2019.

@@ -1,11 +1,7 @@
 package com.example.studly;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -28,7 +24,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
-        Button login = findViewById(R.id.login);
+        Button login = findViewById(R.id.titleAdded);
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

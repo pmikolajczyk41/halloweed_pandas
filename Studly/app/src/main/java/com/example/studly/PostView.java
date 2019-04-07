@@ -1,18 +1,22 @@
 package com.example.studly;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class PostView extends AppCompatActivity {
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,12 +54,37 @@ public class PostView extends AppCompatActivity {
         ((TextView) post.getChildAt(2)).setText(login);
         ((TextView) post.getChildAt(3)).setText(date);
 
+        //pobranie wartosci z komentarza
+        String comment;
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                comment = null;
+            } else {
+                comment= extras.getString("comment");
+            }
+        } else {
+            comment = (String) savedInstanceState.getSerializable("comment");
+        }
+
+        if(comment != null){
+            TextView cmntxt = findViewById(R.id.comment_text);
+            cmntxt.setText(comment);
+
+            TextView cmnlogin = findViewById(R.id.comment_login);
+            cmnlogin.setText("user");
+
+            TextView cmndate = findViewById(R.id.comment_date);
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+            LocalDate localDate = LocalDate.now();
+            cmndate.setText(dtf.format(localDate));
+        }
 
         FloatingActionButton addComment = findViewById(R.id.addComment);
         addComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PostView.this, CommentActivity.class));
+                startActivityForResult(new Intent(PostView.this, CommentActivity.class), 1);
             }
         });
     }

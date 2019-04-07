@@ -1,11 +1,12 @@
 package com.example.studly;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class CommentActivity extends AppCompatActivity {
 
@@ -15,6 +16,17 @@ public class CommentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_comment);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        EditText value = (EditText) findViewById(R.id.commentBox);
+        String comment  = value.getText().toString();
+
+        Button send = findViewById(R.id.sendBtn);
+        send.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.putExtra("comment",comment);
+            setResult(Activity.RESULT_OK,intent);
+            finish();
+        });
 
     }
 
