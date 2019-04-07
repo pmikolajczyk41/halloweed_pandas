@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PostView"
+    tools:showIn="@layout/activity_post_view">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/post_full_view" />
+
+            <TextView
+                android:id="@+id/comment_belka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#6B6054"
+                android:text="Komentarze"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="#D5ECD4"
+                android:textSize="16sp"
+                app:fontFamily="sans-serif-black" />
+
+            <LinearLayout
+                android:id="@+id/comments_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:theme="@style/AppTheme">
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

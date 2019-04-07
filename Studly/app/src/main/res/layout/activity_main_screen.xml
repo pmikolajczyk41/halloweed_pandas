@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:layout_marginTop="140dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_studly_logo_svg_alfa" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/wallgo"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="Tablica"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.121" />
+
+            <Button
+                android:id="@+id/titleAdded"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@color/colorAccent"
+                android:text="LOGIN"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wallgo"
+                app:layout_constraintVertical_bias="0.105" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

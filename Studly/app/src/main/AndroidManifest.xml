@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.studly">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Studly"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".UserProfile"
+            tools:ignore="ExtraText">
+            android:theme="@style/AppTheme.NoActionBar"
+
+        </activity>
+        <activity
+            android:name=".MainScreen"
+            android:label="Studly"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddPostActivity"
+            android:label="@string/title_activity_add_post"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CommentActivity"
+            android:label="@string/title_activity_comment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PostView"
+            android:label="@string/title_activity_post_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WallActivity"
+            android:label="@string/title_activity_wall"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".LoginActivity">android:theme="@style/AppTheme.NoActionBar"
+        </activity>
+    </application>
+
+</manifest>
